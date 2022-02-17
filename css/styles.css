@@ -66,7 +66,6 @@ ul {
   padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px solid teal; */
 }
 
 .section-title {
@@ -104,7 +103,6 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 2px solid tomato; */
 }
 
 .logo {
@@ -146,11 +144,17 @@ ul {
   margin-right: 10px;
 }
 
-.social-list .link {
-  display: inline-block;
+.social-list > .item {
   width: 44px;
   height: 44px;
-  padding: 12px;
+}
+
+.social-list .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .social-icon {
@@ -239,21 +243,10 @@ ul {
   color: var(--accent-text-color);
 }
 
-.envelope-icon-container {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-}
-
 .cont-link-icon.envelope {
   fill: currentColor;
   width: 16px;
   height: 12px;
-}
-
-.phone-icon-container {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
 }
 
@@ -261,7 +254,7 @@ ul {
   fill: currentColor;
   width: 10px;
   height: 16px;
-  background-size: contain;
+  margin-right: 10px;
 }
 
 /* Подвал */
@@ -354,7 +347,7 @@ ul {
   background-color: var(--hero-bacground-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-overlay.jpg);
-  background-size: content;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -426,7 +419,9 @@ ul {
 }
 
 .feat-icon-container {
-  padding: 25px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
@@ -529,8 +524,7 @@ ul {
   margin-right: 30px;
 }
 
-.clients-icon-container {
-  /* padding: 16px 32px; */
+.clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -542,8 +536,8 @@ ul {
   border-radius: 4px;
 }
 
-.clients-icon-container:focus,
-.clients-icon-container:hover {
+.clients-link:focus,
+.clients-link:hover {
   color: var(--accent-text-color);
   border: 1px solid var(--accent-text-color);
 }
@@ -590,6 +584,7 @@ ul {
 .filter-btn:focus {
   background-color: var(--accent-text-color);
   color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Примеры проектов */
@@ -605,8 +600,12 @@ ul {
   width: 370px;
 }
 
-.projects-list > .item:hover,
-.projects-list > .item:focus {
+.projects-link {
+  display: block;
+}
+
+.projects-link:hover,
+.projects-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
